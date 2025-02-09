@@ -1,0 +1,185 @@
+@use 'global' as g;
+
+//フォント
+* {
+  font-feature-settings: 'palt';
+}
+
+:root {
+  --mouseX: 0;
+  --mouseY: 0;
+  scrollbar-width: 50px;
+  --leading-trim: calc((1em - 1lh) / 2);
+}
+
+/* html, body */
+html {
+  font-size: 10px;
+}
+body {
+  color: g.$c-txt;
+  font-family: g.$font;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2;
+  letter-spacing: 0.04rem;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+
+  &.is-loaded {
+    #wrapper {
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 12.5px;
+  }
+}
+
+// SP
+@media only screen and (max-width: g.$size-sp) {
+  html {
+    font-size: 2.67vw; //375用 10/375*100
+  }
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+#wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  overflow-x: clip;
+  background-color: white;
+}
+
+.en {
+  font-family: g.$font-en;
+}
+.en-light {
+  font-family: g.$font-en;
+  font-weight: 300;
+}
+
+.font-r {
+  font-family: g.$font-r;
+}
+.font-b {
+  font-family: g.$font-b;
+}
+.font-l {
+  font-family: g.$font-l;
+  font-weight: 100;
+}
+
+/* a */
+a {
+  color: inherit;
+  pointer-events: all;
+}
+
+/* img */
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+/* input, textarea */
+$color-placeholder: #cccccc;
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='password'],
+textarea {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: g.$c-txt;
+  font-family: g.$font;
+  appearance: none;
+  &::placeholder,
+  &:placeholder-shown,
+  &::-webkit-input-placeholder,
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder {
+    color: $color-placeholder;
+  }
+}
+input::-ms-clear {
+  visibility: hidden;
+}
+input::-ms-reveal {
+  visibility: hidden;
+}
+
+/* select */
+select {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: g.$c-txt;
+  font-family: g.$font;
+  cursor: pointer;
+  appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+/* button */
+button {
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none;
+}
+
+/* svg symbols */
+.symbols {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+//===================================================================
+//スクロールロック
+//===================================================================
+
+body {
+  &.is-scrollLock {
+    overflow: hidden;
+    height: 100vh;
+    pointer-events: none;
+  }
+}

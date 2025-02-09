@@ -1,0 +1,35 @@
+@use '../_foundation/global' as g;
+@use '../_foundation/keyframe' as k;
+@use '../_foundation/mixins' as m;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(white, 0.3);
+  height: 6.8rem;
+  padding-left: 1.7rem;
+  padding-right: 1.9rem;
+  z-index: 100;
+}
+
+.l-header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.l-header__logo{
+  padding-top: 0.5rem;
+}
+
+.l-header__logo-img {
+  width: 10.2rem;
+  height: 2.8rem;
+}

@@ -1,0 +1,33 @@
+@use '../../_foundation/global' as g;
+@use '../../_foundation/mixins' as m;
+
+.c-copies {
+  display: flex;
+  flex-direction: column;
+  font-size: 11.8rem;
+  color: white;
+  line-height: 1;
+  letter-spacing: -0.6rem;
+}
+
+.c-copy {
+  &:nth-of-type(2) {
+    width: 60rem;
+    padding-left: 9.4rem;
+    height: 1lh;
+  }
+  &:nth-of-type(3){
+    margin-left: -5rem;
+  }
+  &:nth-of-type(4) {
+    width: 21rem;
+    height: 1lh;
+    translate: 3rem 0.15lh;
+  }
+}
+
+.c-ttl{
+  font-family: 'europa', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+}

@@ -1,0 +1,144 @@
+body {
+  --side-width:6rem;
+  background-color: white;
+  max-width: 100%;
+}
+
+//p-top-nav
+
+.p-top-nav {
+  position: fixed;
+  height: 100svh;
+  width: var(--side-width);
+  font-size: 1.2rem;
+  mix-blend-mode: difference;
+  color: white;
+  padding-top: 7rem;
+}
+
+.p-top-nav__inner {
+  border-right: 1px solid rgba(white, 0.3);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  writing-mode: sideways-lr;
+  width: 100%;
+  height:calc(100% - 7rem);
+  padding-top: 5rem;
+  position: sticky;
+  top:6rem;
+}
+
+.p-top-nav__ttl--prev,
+.p-top-nav__ttl--next {
+  visibility: hidden;
+  display: none;
+}
+
+//p-top-fv
+.p-top-fv {
+  color: white;
+}
+.p-top-fv__wrapper {
+  background-image: url('/assets/images/top/fv__bg.webp');
+  background-size: cover;
+}
+
+.p-top-fv__inner {
+  aspect-ratio: 1360/700;
+  position: relative;
+  border-bottom:1px solid rgba(white, 0.3);
+  padding-top: 13rem;
+  padding-left: 14.2rem;
+  box-sizing: border-box;
+}
+
+.p-top-fv__scroll {
+  position: absolute;
+  right: 5rem;
+  bottom: 14.3rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.p-top-fv__scroll-txt {
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: white;
+    width: 2rem;
+    height: 1px;
+    top:50%;
+    right:-3rem
+  }
+
+  &:before{
+    translate:0 -.15rem;
+  }
+  &:after{
+    translate:0 .15rem;
+  }
+}
+
+.p-top-fv__scroll-noodle-wrapper{
+  position: absolute;
+  top:0.5rem;
+  right:-2.5rem;
+  overflow: clip;
+}
+.p-top-fv__scroll-noodle-inner {
+  display: flex;
+  flex-direction: column;
+  height: 116px;
+  width: 7.29px;
+  translate:0 -100%;
+  animation:noodleRale 10s infinite forwards linear;
+
+  img{
+    min-height:116px;
+    object-fit: cover;
+  }
+
+  @keyframes noodleRale {
+    0%{
+      translate:0 -100%;
+    }
+
+    100%{
+      translate:0 0;
+    }
+  }
+}
+
+.p-top-fv__bottom{
+  padding-top: 15rem;
+  padding-left: var(--side-width);
+  padding-bottom: 10.2rem;
+}
+.p-top-fv__bottom-inner{
+  display: flex;
+  padding-left: 7rem;
+  padding-right: 19.7rem;
+  justify-content: space-between;
+}
+
+.p-top-fv__content-copy{
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 2.6rem;
+}
+
+.p-top-fv__content-txt{
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin-bottom: 1.8rem;
+}
+
+.p-fv-content__img{
+  width: 30rem;
+  border-radius: .5rem;
+}

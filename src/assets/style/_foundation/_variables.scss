@@ -1,0 +1,44 @@
+// font
+$font: 'YakuHanJP', '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック',
+  'Yu Gothic', 'Yu-Gothic-M', sans-serif;
+$font-r: 'YakuHanJP', 'Yu-Gothic-R', sans-serif;
+$font-b: 'YakuHanJP', 'Yu-Gothic-B', sans-serif;
+$font-l: 'YakuHanJP', 'Yu-Gothic-L', sans-serif;
+
+$font-en: 'Montserrat', sans-serif;
+
+// color
+//s:shade,t:tint
+$c-black1-s: #1f1c1c;
+$c-black2-t: #2b2325;
+$c-txt: #333232;
+$c-brown: #3a3635;
+$c-gray1: #f7f2f3;
+$c-gray2: #f2ebec;
+$c-gray3: #f5f0f1;
+$c-gray4: #bfbfbf;
+$c-white1: #b3afb0;
+$c-white2: #ffffff;
+$c-white3: #f7f5f5;
+$c-gold: #846413;
+$c-gold-t: #937b55;
+$c-red: #841313;
+$c-border-s: #bfbbbc;
+$c-border-t: #e0dcdd;
+
+// device
+$size-tb: 1279px;
+$size-sp: 1023px;
+$size-sp_s: 639px;
+$size-sp_xs: 374px;
+
+$duration: 0.25s;
+$easing: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easing-out: cubic-bezier(0, 0.55, 0.45, 1);
+$easing-in-out: cubic-bezier(0.47, 0.13, 0.39, 0.85);
+$easing-out_c1: cubic-bezier(0.26, 0.06, 0, 1); //opacity,color,
+$easing-out_c2: cubic-bezier(0.18, 0.06, 0.23, 1);
+$easing-out_t1: cubic-bezier(0.43, 0.05, 0.17, 1); //transform
+$easing-out_t2: cubic-bezier(0.55, 0.05, 0.22, 0.99); //transform
+$easing-out_t3: cubic-bezier(0, 1.08, 0.61, 0.97); //transform
+$easing-out_t4: cubic-bezier(0.35, 1.1, 0.56, 0.98); //transform
