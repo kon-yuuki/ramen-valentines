@@ -1,0 +1,28 @@
+# ワークフローの名前を定義します
+name: Deploy to GitHub Pages
+
+# どのような時にこのワークフローを実行するかを定義します
+on:
+  push:
+    branches:
+      - main  # mainブランチにプッシュされた時に実行
+
+# 実際の処理内容を定義します
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # 実行環境としてUbuntuの最新版を使用
+    permissions:
+      contents: write      # リポジトリへの書き込み権限を付与
+    
+    steps:
+      # Step 1: リポジトリの内容をチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      # Step 2: GitHub Pagesへのデプロイを実行
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHubが自動的に提供する認証トークン
+          publish_dir: ./dist  # デプロイするディレクトリを指定
+          publish_branch: gh-pages  # デプロイ先のブランチ名
