@@ -16,7 +16,7 @@
     padding-left: 9.4rem;
     height: 1lh;
   }
-  &:nth-of-type(3){
+  &:nth-of-type(3) {
     margin-left: -5rem;
   }
   &:nth-of-type(4) {
@@ -26,8 +26,28 @@
   }
 }
 
-.c-ttl{
+.c-ttl {
   font-family: 'europa', sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
+}
+
+.c-section {
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    mix-blend-mode: difference;
+  }
+}
+
+.c-main-grid {
+  padding-inline: 13rem;
 }
