@@ -17,6 +17,7 @@
     <title>page title</title>
     <link rel="stylesheet" href="https://use.typekit.net/srh7dlq.css" />
     <script type="module" crossorigin src="./assets/js/index.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index.css">
     <link rel="stylesheet" crossorigin href="./assets/style/style.css">
   </head>
   <body>
@@ -30,6 +31,37 @@
         </symbol>
         <symbol id="i-🍜" viewBox="0 0 16 17" fill="none">
           <path d="M0 16.12H16V0.12H0V16.12Z" fill="white" />
+        </symbol>
+
+        <symbol id="i-logo-x" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.03112 5.92804L14.2429 0H13.0079L8.48248 5.14724L4.86805 0H0.699219L6.16496 7.78354L0.699219 14H1.93432L6.71328 8.56434L10.5304 14H14.6992L9.03112 5.92804ZM7.33948 7.85211L6.78568 7.07705L2.37935 0.909776H4.27639L7.83236 5.88696L8.38615 6.66202L13.0085 13.1316H11.1114L7.33948 7.85211Z"
+            fill="#333333"
+          />
+        </symbol>
+
+        <symbol
+          id="i-logo-instagram"
+          viewBox="0 0 17 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.0947 0.704102H4.90468C2.58468 0.704102 0.704346 2.58477 0.704346 4.90443V12.0944C0.704346 14.4144 2.58501 16.2948 4.90501 16.2948H12.0943C14.4143 16.2948 16.295 14.4141 16.295 12.0941V4.90443C16.295 2.58443 14.4147 0.704102 12.0947 0.704102Z"
+            stroke="#333333"
+            stroke-width="0.91"
+            stroke-miterlimit="10"
+          />
+          <path
+            d="M8.49893 12.263C10.5774 12.263 12.2623 10.5781 12.2623 8.49966C12.2623 6.42123 10.5774 4.73633 8.49893 4.73633C6.4205 4.73633 4.7356 6.42123 4.7356 8.49966C4.7356 10.5781 6.4205 12.263 8.49893 12.263Z"
+            stroke="#333333"
+            stroke-width="0.91"
+            stroke-miterlimit="10"
+          />
+          <path
+            d="M12.9311 4.45736C13.2993 4.45736 13.5977 4.15888 13.5977 3.79069C13.5977 3.4225 13.2993 3.12402 12.9311 3.12402C12.5629 3.12402 12.2644 3.4225 12.2644 3.79069C12.2644 4.15888 12.5629 4.45736 12.9311 4.45736Z"
+            fill="#333333"
+          />
         </symbol>
       </defs>
     </svg>
@@ -47,7 +79,8 @@
             <a href="" class="l-header__nav-link"><span class="js-split-text">TOP</span></a>
           </li>
           <li class="l-header__nav-item">
-            <a href="" class="l-header__nav-link"><span class="js-split-text">INTRODUCTION</span></a
+            <a href="" class="l-header__nav-link"
+              ><span class="js-split-text">INTRODUCTION</span></a
             >
           </li>
           <li class="l-header__nav-item">
@@ -60,7 +93,8 @@
             <a href="" class="l-header__nav-link"><span class="js-split-text">COMMITMENT</span></a>
           </li>
           <li class="l-header__nav-item">
-            <a href="" class="l-header__nav-link"><span class="js-split-text">RAMENGATABETAI</span></a
+            <a href="" class="l-header__nav-link"
+              ><span class="js-split-text">RAMENGATABETAI</span></a
             >
           </li>
           <li class="l-header__nav-item">
@@ -95,201 +129,236 @@
       </div>
     </div>
 
-    <section class="p-top-fv">
-      <div class="p-top-fv__wrapper">
-        <div class="p-top-fv__inner">
-          <h1 class="p-top-fv__title c-copies font__en--light">
-            <span class="c-copy">RAMEN</span
-            ><span class="c-copy"><img src="./assets/valentine__demo.svg" alt="" /></span
-            ><span class="c-copy">CELEBRATION</span
-            ><span class="c-copy"><img src="data:image/svg+xml,%3csvg%20width='212'%20height='95'%20viewBox='0%200%20212%2095'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M27.34%2024.53L26.04%2032.72C24.09%2033.63%2021.75%2034.02%2019.67%2034.02C0.56%2034.02%201.6%200.0899978%2026.43%200.0899978C36.96%200.0899978%2048.01%208.67%2048.01%2022.06C48.01%2050.27%2014.08%2072.37%2011.48%2089.92C19.67%2085.37%2026.82%2082.9%2034.23%2082.9C39.43%2082.9%2044.89%2084.33%2050.48%2087.06L49.18%2094.34C42.03%2090.83%2033.97%2088.36%2026.04%2088.36C20.84%2088.36%2015.9%2089.4%2011.35%2092H5.24C5.24%2064.83%2041.25%2043.64%2041.25%2018.68C41.25%208.67%2036.05%201.78%2026.3%201.78C5.11%201.78%207.45%2027%2019.8%2027C23.31%2027%2026.17%2025.44%2027.34%2024.53ZM76.7481%2092.78C41.5181%2092.78%2041.5181%200.219996%2076.7481%200.219996C111.978%200.219996%20111.978%2092.78%2076.7481%2092.78ZM76.7481%201.91C54.3881%201.91%2054.3881%2091.09%2076.7481%2091.09C99.1081%2091.09%2099.1081%201.91%2076.7481%201.91ZM128.979%2024.53L127.679%2032.72C125.729%2033.63%20123.389%2034.02%20121.309%2034.02C102.199%2034.02%20103.239%200.0899978%20128.069%200.0899978C138.599%200.0899978%20149.649%208.67%20149.649%2022.06C149.649%2050.27%20115.719%2072.37%20113.119%2089.92C121.309%2085.37%20128.459%2082.9%20135.869%2082.9C141.069%2082.9%20146.529%2084.33%20152.119%2087.06L150.819%2094.34C143.669%2090.83%20135.609%2088.36%20127.679%2088.36C122.479%2088.36%20117.539%2089.4%20112.989%2092H106.879C106.879%2064.83%20142.889%2043.64%20142.889%2018.68C142.889%208.67%20137.689%201.78%20127.939%201.78C106.749%201.78%20109.089%2027%20121.439%2027C124.949%2027%20127.809%2025.44%20128.979%2024.53ZM160.295%2036.62L158.735%2035.84L163.545%201.91H165.625C166.535%202.81999%20167.965%203.33999%20169.655%203.33999C173.685%203.33999%20178.625%200.869995%20183.435%200.869995C188.245%200.869995%20192.665%203.21%20195.655%2012.05H194.875C192.925%208.02%20190.455%206.97999%20187.725%206.97999C183.955%206.97999%20179.665%209.06%20175.115%209.06C171.865%209.06%20168.485%208.02%20165.235%204.25L161.335%2031.68C163.935%2028.69%20167.315%2027.13%20171.345%2027.13C211.515%2027.13%20208.395%2093.82%20174.335%2093.82C149.375%2093.82%20149.505%2061.58%20157.825%2051.7L166.015%2053.26C156.005%2065.74%20156.265%2092.13%20174.335%2092.13C195.655%2092.13%20197.995%2028.82%20171.345%2028.82C166.015%2028.82%20162.375%2031.94%20160.295%2036.62Z'%20fill='white'/%3e%3c/svg%3e" alt="" /></span>
-          </h1>
-          <div class="p-top-fv__scroll font__en">
-            <p class="p-top-fv__scroll-txt">Find Your Special Bowl !!</p>
-            <div class="p-top-fv__scroll-noodle-wrapper">
-              <div class="p-top-fv__scroll-noodle-inner">
-                <img src="data:image/webp;base64,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" alt="" />
-                <img src="data:image/webp;base64,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" alt="" />
-                <img src="data:image/webp;base64,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" alt="" />
+    <main class="p-top-main">
+      <section class="p-top-fv">
+        <div class="p-top-fv__wrapper">
+          <div class="p-top-fv__inner">
+            <h1 class="p-top-fv__title c-copies font__en--light">
+              <span class="c-copy">RAMEN</span
+              ><span class="c-copy"
+                ><img src="./assets/valentine__demo.svg" alt="" /></span
+              ><span class="c-copy">CELEBRATION</span
+              ><span class="c-copy"><img src="data:image/svg+xml,%3csvg%20width='212'%20height='95'%20viewBox='0%200%20212%2095'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M27.34%2024.53L26.04%2032.72C24.09%2033.63%2021.75%2034.02%2019.67%2034.02C0.56%2034.02%201.6%200.0899978%2026.43%200.0899978C36.96%200.0899978%2048.01%208.67%2048.01%2022.06C48.01%2050.27%2014.08%2072.37%2011.48%2089.92C19.67%2085.37%2026.82%2082.9%2034.23%2082.9C39.43%2082.9%2044.89%2084.33%2050.48%2087.06L49.18%2094.34C42.03%2090.83%2033.97%2088.36%2026.04%2088.36C20.84%2088.36%2015.9%2089.4%2011.35%2092H5.24C5.24%2064.83%2041.25%2043.64%2041.25%2018.68C41.25%208.67%2036.05%201.78%2026.3%201.78C5.11%201.78%207.45%2027%2019.8%2027C23.31%2027%2026.17%2025.44%2027.34%2024.53ZM76.7481%2092.78C41.5181%2092.78%2041.5181%200.219996%2076.7481%200.219996C111.978%200.219996%20111.978%2092.78%2076.7481%2092.78ZM76.7481%201.91C54.3881%201.91%2054.3881%2091.09%2076.7481%2091.09C99.1081%2091.09%2099.1081%201.91%2076.7481%201.91ZM128.979%2024.53L127.679%2032.72C125.729%2033.63%20123.389%2034.02%20121.309%2034.02C102.199%2034.02%20103.239%200.0899978%20128.069%200.0899978C138.599%200.0899978%20149.649%208.67%20149.649%2022.06C149.649%2050.27%20115.719%2072.37%20113.119%2089.92C121.309%2085.37%20128.459%2082.9%20135.869%2082.9C141.069%2082.9%20146.529%2084.33%20152.119%2087.06L150.819%2094.34C143.669%2090.83%20135.609%2088.36%20127.679%2088.36C122.479%2088.36%20117.539%2089.4%20112.989%2092H106.879C106.879%2064.83%20142.889%2043.64%20142.889%2018.68C142.889%208.67%20137.689%201.78%20127.939%201.78C106.749%201.78%20109.089%2027%20121.439%2027C124.949%2027%20127.809%2025.44%20128.979%2024.53ZM160.295%2036.62L158.735%2035.84L163.545%201.91H165.625C166.535%202.81999%20167.965%203.33999%20169.655%203.33999C173.685%203.33999%20178.625%200.869995%20183.435%200.869995C188.245%200.869995%20192.665%203.21%20195.655%2012.05H194.875C192.925%208.02%20190.455%206.97999%20187.725%206.97999C183.955%206.97999%20179.665%209.06%20175.115%209.06C171.865%209.06%20168.485%208.02%20165.235%204.25L161.335%2031.68C163.935%2028.69%20167.315%2027.13%20171.345%2027.13C211.515%2027.13%20208.395%2093.82%20174.335%2093.82C149.375%2093.82%20149.505%2061.58%20157.825%2051.7L166.015%2053.26C156.005%2065.74%20156.265%2092.13%20174.335%2092.13C195.655%2092.13%20197.995%2028.82%20171.345%2028.82C166.015%2028.82%20162.375%2031.94%20160.295%2036.62Z'%20fill='white'/%3e%3c/svg%3e" alt="" /></span>
+            </h1>
+            <div class="p-top-fv__scroll font__en">
+              <p class="p-top-fv__scroll-txt">Find Your Special Bowl !!</p>
+              <div class="p-top-fv__scroll-noodle-wrapper">
+                <div class="p-top-fv__scroll-noodle-inner">
+                  <img src="data:image/webp;base64,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" alt="" />
+                  <img src="data:image/webp;base64,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" alt="" />
+                  <img src="data:image/webp;base64,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" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-top-fv__bottom">
+            <div class="p-top-fv__bottom-inner">
+              <h2 class="c-ttl">[INTRODUCTION]</h2>
+              <div class="p-top-fv__content">
+                <p class="p-top-fv__content-copy">
+                  今年のバレンタインは、<br />いつもと違う味わいを。
+                </p>
+                <p class="p-top-fv__content-txt">
+                  バレンタインはチョコレートだけじゃない。 （もちろんチョコも好き）<br />チョコレートの代わりに、ラーメンという選択。
+                  <br />このサイトは、バレンタインの新しい楽しみ方を勝手に提案しています。<br />好きな人と、好きな場所で、好きなラーメン。
+                  <br />あなたらしい特別な日に、あなたらしい特別な一杯を。<br />温かい出汁と、香り立つ麺で、心も温まる素敵な思い出を。<br />いつものお店で、いつもと違うバレンタイン。
+                  <br />そんな新しいバレンタインはいかがですか?
+                </p>
+                <img src="./assets/fv_ramen2.webp" alt="" class="p-fv-content__img" />
               </div>
             </div>
           </div>
         </div>
-        <div class="p-top-fv__bottom">
-          <div class="p-top-fv__bottom-inner">
-            <h2 class="c-ttl">[INTRODUCTION]</h2>
-            <div class="p-top-fv__content">
-              <p class="p-top-fv__content-copy">今年のバレンタインは、<br>いつもと違う味わいを。</p>
-              <p class="p-top-fv__content-txt">
-                バレンタインはチョコレートだけじゃない。 （もちろんチョコも好き）<br>チョコレートの代わりに、ラーメンという選択。 <br>このサイトは、バレンタインの新しい楽しみ方を勝手に提案しています。<br>好きな人と、好きな場所で、好きなラーメン。 <br>あなたらしい特別な日に、あなたらしい特別な一杯を。<br>温かい出汁と、香り立つ麺で、心も温まる素敵な思い出を。<br>いつものお店で、いつもと違うバレンタイン。 <br>そんな新しいバレンタインはいかがですか?
-              </p>
-              <img src="./assets/fv_ramen2.webp" alt="" class="p-fv-content__img" />
-            </div>
-          </div>
+      </section>
+
+      <section class="p-top-second c-section">
+        <div class="p-top-second__inner">
+          <h2 class="p-top-ttl c-ttl">[WHAT IS OUR NOODLE]</h2>
+          <p class="p-top-second__txt">
+            今年のバレンタインは、いつもと違う味わいを。伝統と革新が織りなす、<br />唯一無二のラーメン体験。厳選された食材と職人の技が生み出す至高の一杯。<br />このバレンタインシーズン、私たちは特別なラーメン体験をお届けします。
+          </p>
+          <img src="./assets/what_noodle.webp" alt="" class="p-top-second__img" />
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="p-top-second">
-      <div class="p-top-second__inner">
-        <h2 class="p-top-ttl">[WHAT IS OUR NOODLE]</h2>
-        <p class="p-top-second__txt">
-          今年のバレンタインは、いつもと違う味わいを。
-          伝統と革新が織りなす、唯一無二のラーメン体験。厳選された食材と職人の技が生み出す至高の一杯。
-          このバレンタインシーズン、私たちは特別なラーメン体験をお届けします。
-        </p>
-        <img src="" alt="" class="p-top-second__img" />
-      </div>
-    </section>
-
-    <section class="p-top-menu">
-      <div class="p-top-menu__inner">
-        <h2 class="p-top-ttl__big">MENU</h2>
-        <p class="p-top-menu__lead">
-          今年のバレンタインは、いつもと違う味わいを。
-          伝統と革新が織りなす、唯一無二のラーメン体験。厳選された食材と職人の技が生み出す至高の一杯。
-          このバレンタインシーズン、私たちは特別なラーメン体験をお届けします。
-        </p>
-        <ul class="p-top-menu__list">
-          <li class="p-top-menu__item">
-            <a href="" class="p-top-menu__link img-ov">
-              <img src="" alt="" class="p-top-menu__thumb" />
+      <section class="p-top-menu c-section">
+        <div class="p-top-menu__inner">
+          <h2 class="p-top-ttl__big font__en">MY RECOMEND MENU</h2>
+          <p class="p-top-menu__lead">
+            私が、今おすすめしたい旨いラーメン屋さん。
+            <br />寒い2月に心も体も温まる、特別な3杯をご紹介します。<br />普段は気付かない特別さを感じてほしくて、私の独断と偏見で選んだおすすめの3店舗です。
+          </p>
+          <ul class="p-top-menu__list c-main-grid">
+            <li class="p-top-menu__item">
+              <img src="./assets/menu_1.webp" alt="" class="p-top-menu__thumb" />
               <h3 class="p-top-menu__ttl">濃厚トリュフ香る特製そば</h3>
               <p class="p-top-menu__txt">
                 48時間かけて丁寧に抽出した極上スープに、
                 フランス産トリュフとフォアグラを贅沢に使用。
               </p>
-            </a>
-          </li>
-          <li class="p-top-menu__item">
-            <a href="" class="p-top-menu__link img-ov">
-              <img src="" alt="" class="p-top-menu__thumb" />
+            </li>
+            <li class="p-top-menu__item">
+              <img src="./assets/menu_2.webp" alt="" class="p-top-menu__thumb" />
               <h3 class="p-top-menu__ttl">金箔のせプレミアムラーメン</h3>
               <p class="p-top-menu__txt">
                 特製スープに金箔を浮かべた プレミアムな一杯。記念日を彩る極上の味わい。
               </p>
-            </a>
-          </li>
-          <li class="p-top-menu__item">
-            <a href="" class="p-top-menu__link img-ov">
-              <img src="" alt="" class="p-top-menu__thumb" />
+            </li>
+            <li class="p-top-menu__item">
+              <img src="./assets/menu_3.webp" alt="" class="p-top-menu__thumb" />
               <h3 class="p-top-menu__ttl">苺と鴨の贅沢フュージョン麺</h3>
               <p class="p-top-menu__txt">
                 鴨の旨味と苺の香りが織りなす、 新感覚のバレンタイン限定麺。
               </p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="p-top-commitment">
-      <h2 class="p-top-ttl__big">PEOPLE WHO THINK DIFFERENCE,<br />MAKE DIFFERENT.</h2>
-      <div class="p-top-commitment__inner">
-        <div class="p-top-commitment__left">
-          <p class="p-top-commitment__txt">
-            素材へのこだわり、丁寧な仕事。 職人さんがラーメンに込める想いは、
-            バレンタインのチョコと変わらない。 一杯一杯に、
-            作り手の誇りと真心を込めて作られたラーメンだからこそ
-            特別な日「バレンタインデー」に食べたいと思える。
-          </p>
-          <img src="" alt="" class="p-top-commitment__img" />
-        </div>
-        <div class="p-top-commitment__right">
-          <img src="" alt="" class="p-top-commitment__img" />
-          <p class="p-top-commitment__txt">
-            お気に入りの一杯が、今日は特別な思い出になる。
-            いつものラーメンが、バレンタインの主役に。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="p-top-tabetai">
-      <div class="p-top-tabetai__top">
-        <div class="p-top-tabetai__heading">
-          <h2 class="p-top-ttl__jp">バレンタインでも、<br />ラーメンが食べたい。</h2>
-          <img src="" alt="" class="p-top-tabetai__img-top" />
-        </div>
-        <div class="p-top-tabetai__flex">
-          <img src="" alt="" class="p-top-tabetai__img" />
-          <p class="p-top-tabetai__txt">
-            チョコレートを選ぶのが当たり前だった特別な日。 でも、本当に食べたいものは人それぞれ。
-            温かい出汁の香り、のびる麺の艶、トッピングの彩り。
-            あなたの心が求めている味は、意外とシンプルなのかもしれない。
-            伝統的なバレンタインから一歩踏み出して、 新しい選択をする勇気。
-            誰かのために選ぶのではなく、 純粋に自分の気持ちに正直になれる時間。
-            寒い季節だからこそ、温かい一杯に心惹かれる。 湯気の向こうに見える笑顔も、
-            今日は特別に輝いて見えるはず。 ひとりでゆっくり味わうのも、 大切な人と共有するのも自由。
-            あなたらしさが詰まった一杯が、 このバレンタインをかけがえのない思い出に変えていく。
-            今年は、あなたの「食べたい」から始めよう。
-          </p>
-        </div>
-      </div>
-      <div class="p-top-tabetai__bottom">
-        <ul class="p-top-tabetai__list">
-          <li class="p-top-tabetai__item">
-            <h3 class="p-top-tabetai__point-ttl">POINT1</h3>
-            <img src="" alt="" class="p-top-tabetai__thumbnail" />
-            <p class="p-top-tabetai__detail">
-              今年のバレンタインは、 誰かのためじゃなく自分の食べたいものを。
-            </p>
-          </li>
-          <li class="p-top-tabetai__item">
-            <h3 class="p-top-tabetai__point-ttl">POINT2</h3>
-            <img src="" alt="" class="p-top-tabetai__thumbnail" />
-            <p class="p-top-tabetai__detail">いつもの味が、 この日だけの贅沢な思い出になる。</p>
-          </li>
-          <li class="p-top-tabetai__item">
-            <h3 class="p-top-tabetai__point-ttl">POINT3</h3>
-            <img src="" alt="" class="p-top-tabetai__thumbnail" />
-            <p class="p-top-tabetai__detail">チョコレートの代わりに、 心温まる一杯を楽しむ。</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="p-top-access">
-      <div class="p-top-access__heading">
-        <h2 class="p-top-ttl__big">ACCESS</h2>
-        <p class="p-top-access__lead">
-          あなたの思い出の一杯がある場所へ。 いつもの一杯が、今日は特別な思い出に。
-          おひとりさまでも、誰かといっしょでも。 バレンタインは、やっぱり推しラーメンで。
-        </p>
-      </div>
-      <div class="p-top-access__map">
-        <p class="p-top-access__copy">
-          今夜はあのお店に<br />
-          行こうかな。
-        </p>
-        <img src="" alt="" class="p-top-access__img" />
-      </div>
-    </section>
-
-    <section class="p-top-share">
-      <div class="p-top-share__heading">
-        <h2 class="p-top-ttl__big">SHARE YOUR VALENTINE'S STORY</h2>
-        <div class="p-top-share__content">
-          <p class="p-top-share__txt">
-            あなたの特別な一杯の瞬間を写真に残そう。
-            バレンタインの主役は、今年はあなたと一杯のラーメン。
-            <a href="">#ValentineRamen2025</a> をつけて投稿しよう！
-          </p>
-          <ul class="p-top-share__list">
-            <li class="p-top-share__item">
-              <a href="" class="p-top-share__link"
-                ><span class="visually-hidden">Xでシェアする</span></a
-              >
-            </li>
-            <li class="p-top-share__item">
-              <a href="" class="p-top-share__link"
-                ><span class="visually-hidden">Instagramでシェアする</span></a
-              >
             </li>
           </ul>
         </div>
-      </div>
-      <div class="p-top-share__gallery"></div>
-    </section>
+      </section>
+
+      <section class="p-top-commitment c-main-grid">
+        <h2 class="p-top-ttl__big font__en">PEOPLE WHO THINK DIFFERENCE,<br />MAKE DIFFERENT.</h2>
+        <div class="p-top-commitment__inner">
+          <div class="p-top-commitment__left">
+            <p class="p-top-commitment__txt">
+              素材へのこだわり、丁寧な仕事。<br />職人さんがラーメンに込める想いは、<br />バレンタインのチョコと変わらない。<br />一杯一杯に、<br />作り手の誇りと真心を込めて作られたラーメンだからこそ<br />特別な日「バレンタインデー」に食べたいと思える。
+            </p>
+            <img src="./assets/commitment_1.webp" alt="" class="p-top-commitment__img" />
+          </div>
+          <div class="p-top-commitment__right">
+            <img src="./assets/commitment_2.webp" alt="" class="p-top-commitment__img" />
+            <p class="p-top-commitment__txt">
+              お気に入りの一杯が、今日は特別な思い出になる。
+              いつものラーメンが、バレンタインの主役に。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-top-tabetai c-section">
+        <div class="p-top-tabetai__top">
+          <div class="p-top-tabetai__heading">
+            <h2 class="p-top-ttl__jp c-main-grid">
+              <span class="p-top-ttl__jp__row1">バレンタインでも、</span
+              ><span class="p-top-ttl__jp__row2">ラーメンが食べたい。</span>
+            </h2>
+            <img src="./assets/tabetai_1.webp" alt="" class="p-top-tabetai__img-top" />
+          </div>
+          <div class="p-top-tabetai__flex c-main-grid">
+            <img src="./assets/tabetai_2.webp" alt="" class="p-top-tabetai__img" />
+            <p class="p-top-tabetai__txt">
+              チョコレートを選ぶのが当たり前だった特別な日。 でも、本当に食べたいものは人それぞれ。
+              温かい出汁の香り、のびる麺の艶、トッピングの彩り。
+              あなたの心が求めている味は、意外とシンプルなのかもしれない。
+              伝統的なバレンタインから一歩踏み出して、 新しい選択をする勇気。
+              誰かのために選ぶのではなく、 純粋に自分の気持ちに正直になれる時間。
+              寒い季節だからこそ、温かい一杯に心惹かれる。 湯気の向こうに見える笑顔も、
+              今日は特別に輝いて見えるはず。 ひとりでゆっくり味わうのも、
+              大切な人と共有するのも自由。 あなたらしさが詰まった一杯が、
+              このバレンタインをかけがえのない思い出に変えていく。
+              今年は、あなたの「食べたい」から始めよう。
+            </p>
+          </div>
+          <div class="p-top-tabetai__bg">
+            <img src="./assets/tabetai_bg.webp" alt="" />
+          </div>
+        </div>
+        <div class="p-top-tabetai__bottom">
+          <ul class="p-top-tabetai__list">
+            <li class="p-top-tabetai__item">
+              <h3 class="p-top-tabetai__point-ttl">
+                <span class="u-visually-hidden">POINT1</span
+                ><img src="data:image/webp;base64,UklGRtYCAABXRUJQVlA4WAoAAAAQAAAAGgAAXQAAQUxQSGUCAAABcBXbVt0cCUi4EiLhSsBBkRAHxUFwAA5SB4mD1AF1gITzwbMOImICAGz4Y/wHo91koU3V8r+VtLv6PN2oTwAeg256YdZi8NGZYcmyDj7LOjxZOjInpeym0jwHS/KKMZMLYAubfsKICCApk7eib1x4CutyBcWoeReOZ9d7FZL8fT8ppfv+kWS2jTf5C2rQN7rf5BuA8FbMSyKAy2PtDpiI9Wr/sP3DxD/gei9SAMooC8xBANjJy21D4q5CX8FlkuU5Y/A+xqeQ5I62pMzJKKg31DZ9O7+0G7Rjo5ZNNzEYZbSbLLSpWv63kryb30MGkA3W7/hjtosUAFmuM05fmVVUwbRmVhELD7Ihc/KQzIqVtpAMBisPkkWxUi6Sj2ClFpIBK81BsuwY3HqaSeYNo0fLHCQZDIYZ1UBDIXkr+vKuyPK95wurqJjVECwUwIHpSJJ5A2CmHIu3uj9Y+ckCANIz1lk1rQ+G3xebTxDAXyOSORoF3vYk8/bOWec/X5KMBv10CvriPmSWjpyoNcRdAEB85qtltYqsX6jF89VwAsBFK+oStQIkv6Adi+YWWjBREiAHRn0HODOA6z0gccASgJTsTEOzG9grbJl8ruspfDCYGpBUWAezAIA6Zw2GRxbaGSMipoPQMy48hc3ndILBLRVOXto5SPL3Tcl7nz73jySjVJElWINRoyEzA3hnh5VaXYK1Btgc1m/2D+b8A64oS8wBQHKOOiXvQgCQTJYr7FZVNrUunIUsWgE+czoadI37lIFy7wZNi/amznvv3IbabACytGbNBYC8zriSjdWt31oAWQ2W71gNAFZQOCBKAAAAkAMAnQEqGwBeAD5tNpZIpCMiIiVoAIANiWkDsAAFvq374vfoAAD++C7/tf95f/+Vjgoc/AXQBtVbuEZ5Cbo8GYES/c7J8+IAAAA=" alt="" />
+              </h3>
+              <img src="./assets/point_1.webp" alt="" class="p-top-tabetai__thumbnail" />
+              <p class="p-top-tabetai__detail">
+                今年のバレンタインは、<br />誰かのためじゃなく自分の食べたいものを。
+              </p>
+            </li>
+            <li class="p-top-tabetai__item">
+              <h3 class="p-top-tabetai__point-ttl">
+                <span class="u-visually-hidden">POINT2</span
+                ><img src="data:image/webp;base64,UklGRjQDAABXRUJQVlA4WAoAAAAQAAAAGgAAZAAAQUxQSLkCAAABcFZrW5i8Eb4IXwQifBFoIBFoIA1cA2igDbYGswE2IML7g8GwQURMAACHP+Z/MHunC33plv+tlRj69zvMpgLgFAzLA3c9Jk+7M61V1yFVXYez6kDvaWtROqv34EnuOVdyAXzjZbohqgpoqeRhGEvYzsa+7ZthVp6N8zWMHo0kf99PKeU4fiRZ/cWT/G0mGIvFg3wCUB6G+1oIYE9YGwHJWG/+D+4fkv+A/bnIABizLpAXASCSe3BTGvbG1CFUku185y2lnM9GkhHXWipvZkXv0PvyHfxKFFzni16dORXMMnunC33plv+tlRTux60CqIL1EX+sfpEBINv+zrf3yi6b4rZVdhkLX+SF3tOTZDWs9I3kJlj5ItkMK3UneSpWWiO5YaW8SLaISTeySrI6zL6u5EWSm2Ca2QS2NZKHYazPjmzf435jlw13bds8DMALtzNJVgdAbgW25C2eWPmpCgA6Eh+8ydUH08+dl+emQNpntHI2K5IfaeWRQvAhfb4kmQXj8laMNXzIqgN9o7ctRwUATZWPK29dZv9Ar4mPi6AAQvZqodA6QOsDNvC4dNsVJGsB9IXZNADeFcD+nNA84QlAWw1yYTVMxA6ukue+n40nJssFtDT2mywAYCF4wfTMQn9HVFUG2EYStrPx8nwHxaQrjTd3G7xI8vctJaVUPsePJLN2mW3zglmxrbICeNaAldbtirUCuID1zv9B3n/AnnWJvABordlu6bMRALSSbd+iN1NnPmzvRjbrgFR5OwuGEj5toh1RcNNZSCmF4DCZvF5Mq16RPMNcbGTLCuCIlaw2EVhN4AqAaEgkXzI46THUHdBKVr1qxGQTQN4k48WPOkEPAIlkFgAu2kgYO/hKVsW8MV1AK8nnXBwBiWQNchEB7LQRtJDkvqXcDkBJmQBcaSTZEoDYMu46H0wAAFZQOCBUAAAAkAMAnQEqGwBlAD5tNpdIpCMiIiSIAIANiWkAACLQsidQrL9QAAD++C7/tf95f/+Vjgoc/AXQBtVhttVR4Lngd9oCJfudj1ZUX82Iv6+CuQi6AAAA" alt="" />
+              </h3>
+              <img src="./assets/point_2.webp" alt="" class="p-top-tabetai__thumbnail" />
+              <p class="p-top-tabetai__detail">
+                いつもの味が、<br />この日だけの贅沢な思い出になる。
+              </p>
+            </li>
+            <li class="p-top-tabetai__item">
+              <h3 class="p-top-tabetai__point-ttl">
+                <span class="u-visually-hidden">POINT3</span
+                ><img src="data:image/webp;base64,UklGRkwDAABXRUJQVlA4WAoAAAAQAAAAGgAAaQAAQUxQSMcCAAABoFVbW94IOxKQ8EqIBCTgoEiIg+KgOAAHHQepg4wDxgESngsSkn4/9xExAcDCF8s3VMJiN4Y63P61Xtc4vt9xNlVgd5zWB1cDk7u/Mm3N7iM1u4+92Ylds95XN/h2jSBpK6VJNxC6DtMFZ2ZgtUkfz7mLee8a+5Y9s+7ZNd/i2aNL0t/vT6318/mTpBYOntJf9o5z59eP9ARMH891qwK2xL0ruML9Pnxh+YYrX2B73uQBr2I3uJcAVmmLy5TFrSsNxCap7++SUypl75K0cmy16WIxxoUx1N+Tv7o6jsvBaItfzDGrEha7MdTh9q/1muL1NTegOe5f+WILN3lA6tu7XN6ahuKNy75pKNz4kg7smu2SmufO0CVlx50vSd1zp22SduNO3yVl7nQvSX1lcjnzTVJbmH0duZckZce0inf43CV9POf2HKT++7neNRTPVZ9zwAMvLhdJagvgLkX1FPy6c+dPMwA7cyEG745+mH5uOtyzQdpmrGm2GCmcWdMnxRhi+vmVpOI4r2/j3OKP1OzE3ow+l9UALDU9joIfisYHoyU9DqIBsQTzscoPYO2BPwkcLvkIV6yCvZhNJ/BuwPacsDIRBFhv0R34FifWgaVJ+7btXTuT9QCrXWN2NwA+xuCYnrkxXHFm5k7IZy7mvetwf0djcqldFzd/8pKkv99aU0r15/MnScWGop6DY9b53NSAZ4vc6YfNuNfBErl/CV9w7y+wFbvFvQBrrfhL9uwCsCb1La/Be1t8iPndpe4HSE2Xi+PUxZ8+0T+rY9JiWlcfU0oxLkz7TWNbmF3j8FTPMa5N8jNkICo7xqwGODsKQEscuy4PsdlBBL9zvmmFpGZDhRgn8AtsStmAHaKfAUzyPA0E/kpVA55mArfOrVIBeC4C1sfMKjUbiA2gFjvym6SF4zSQtb9zeXdJ3XPVqg57ctzpY4wL/98AVlA4IF4AAADQAwCdASobAGoAPm0ylUekIyIhqSgAgA2JaQAARk24ZBs0xupTMAAA/vgu/7X/eX//lY4KHPwF0Abd2Cch7I/WLkGu6GUK20rEWFpEm9oIIWADQ/rz65L/7lYQwAAA" alt="" />
+              </h3>
+              <img src="./assets/point_3.webp" alt="" class="p-top-tabetai__thumbnail" />
+              <p class="p-top-tabetai__detail">
+                チョコレートの代わりに、<br />心温まる一杯を楽しむ。
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="p-top-access c-main-grid c-section">
+        <div class="p-top-access__inner">
+          <div class="p-top-access__heading">
+            <h2 class="p-top-ttl__big font__en">ACCESS</h2>
+            <p class="p-top-access__lead">
+              あなたの思い出の一杯がある場所へ。<br />いつもの一杯が、今日は特別な思い出に。<br />おひとりさまでも、誰かといっしょでも。<br />バレンタインは、やっぱり推しラーメンで。
+            </p>
+          </div>
+          <div class="p-top-access__right">
+            <p class="p-top-access__copy">
+              今夜はあのお店に<br />
+              行こうかな。
+            </p>
+            <div class="p-top-access__map">
+              <img src="./assets/map.webp" alt="" class="p-top-access__img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-top-share">
+        <div class="p-top-share__heading c-main-grid">
+          <h2 class="p-top-ttl__big font__en">SHARE YOUR<br />VALENTINE'S STORY</h2>
+          <div class="p-top-share__content">
+            <p class="p-top-share__txt">
+              あなたの特別な一杯の瞬間を写真に残そう。<br />バレンタインの主役は、今年はあなたと一杯のラーメン。<br /><a
+                href=""
+                class="c-linelink red"
+                ><span class="c-linelink__txt">#ValentineRamen2025</span></a
+              >
+              をつけて投稿しよう！
+            </p>
+            <ul class="p-top-share__list">
+              <li class="p-top-share__item">
+                <a href="" class="p-top-share__link"
+                  ><span class="u-visually-hidden">Xでシェアする</span
+                  ><svg class="p-top-share__link--icon">
+                    <use href="#i-logo-x"></use></svg></a>
+              </li>
+              <li class="p-top-share__item">
+                <a href="" class="p-top-share__link"
+                  ><span class="u-visually-hidden">Instagramでシェアする</span
+                  ><svg class="p-top-share__link--icon">
+                    <use href="#i-logo-instagram"></use></svg></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="splide p-top-share__gallery" role="group" aria-label="Splideの基本的なHTML">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img src="./assets/slider_1.webp" alt=""></li>
+              <li class="splide__slide"><img src="./assets/slider_2.webp" alt=""></li>
+              <li class="splide__slide"><img src="./assets/slider_3.webp" alt=""></li>
+              <li class="splide__slide"><img src="./assets/slider_4.webp" alt=""></li>
+              <li class="splide__slide"><img src="./assets/slider_5.webp" alt=""></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="l-footer">
       <div class="l-footer__pr">
