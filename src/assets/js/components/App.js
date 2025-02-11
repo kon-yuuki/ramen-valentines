@@ -9,7 +9,7 @@ class App {
     let winW = innerWidth;
 
     if (winW > 1023) {
-      new Top()
+      new Top();
       new SplitText('.js-split-text', 'char');
     }
   }

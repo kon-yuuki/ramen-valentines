@@ -16,7 +16,7 @@ body {
     width: 1px;
     background-color: rgba(white, 0.3);
     mix-blend-mode: difference;
-    z-index: 1;
+    z-index: 100;
   }
 }
 
@@ -431,6 +431,7 @@ body {
   right: calc(6rem + 1px);
   inset: 0;
   display: block;
+  border-left:1px solid rgba(#333333,.3);
 }
 
 .p-top-share {
@@ -453,7 +454,7 @@ body {
   gap: 1rem;
 }
 
-.p-top-share__txt{
+.p-top-share__txt {
   font-size: 1.4rem;
 }
 
@@ -463,15 +464,96 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width:4rem;
+  width: 4rem;
   aspect-ratio: 1/1;
 }
 
-.p-top-share__link--icon{
-  width:40%;
+.p-top-share__link--icon {
+  width: 40%;
   aspect-ratio: 1/1;
 }
 
-.p-top-share__gallery{
-  padding-inline:var(--side-width);
+.p-top-share__gallery {
+  padding-inline: var(--side-width);
+}
+
+.p-top-pr__ttl {
+  width: fit-content;
+  white-space: nowrap;
+  padding-right: 1rem;
+  position: relative;
+  margin-right: 1rem;
+
+  &:after {
+    content: '';
+    height: 1.3rem;
+    width: 1px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    translate: 0 -50%;
+    background-color: white;
+    opacity: 0.5;
+  }
+}
+
+.p-top-pr {
+  padding: 1rem 0 1rem 1rem;
+  background-color: #242e33;
+  display: flex;
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1000;
+}
+.p-top-pr__item {
+  display: flex;
+  align-items: center;
+}
+
+.p-top-pr__icon {
+  width: 1rem;
+}
+.l-footer {
+  background-color: #e61d0d;
+  color: white;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+
+.l-footer__content {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 13rem;
+}
+
+.l-footer__nav {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.l-footer__noodle {
+  position: absolute;
+  bottom: -8rem;
+  left: 20rem;
+  width: 16.9rem;
+  display: block;
+}
+
+.l-footer__copies {
+  position: relative;
+}
+
+.l-footer__item {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.l-footer__bottom-inner{
+  border:1px solid rgba(white,.5);
+  display: flex;
+  justify-content: space-between;
+  padding:1rem 1rem;
+  font-size: 1.4rem;
 }
