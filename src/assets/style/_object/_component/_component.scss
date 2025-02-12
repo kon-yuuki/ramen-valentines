@@ -54,3 +54,17 @@
 .c-outer-grid {
   padding-inline: 11rem;
 }
+
+
+.js-parallax-wrapper{
+  position:relative;
+  overflow:hidden;
+}
+
+.js-parallax-target{
+  position:absolute;
+  inset:0;
+  top:-200px;
+  height:calc(100% + 200px);
+  object-fit: cover;
+}

@@ -130,17 +130,96 @@ a {
 .c-btn {
   border: 1px solid currentColor;
   border-radius: 100svh;
-  padding: 0.5rem 1.7rem 0.5rem 1.6rem;
+  padding: 0.7rem 1.7rem 0.7rem 1.6rem;
+  transition:all 1.25s g.$easing-out_t3;
+
+  @include g.hover{
+    background-color: #E61D0D;
+    border-color:transparent;
+  }
 }
 
 .c-btn__inner {
   display: flex;
   align-items: center;
-  gap: 0rem;
+  gap: 0.2rem;
 }
 
 .c-btn__icon {
   width: 1.6rem;
   height: 1.6rem;
+  translate:0 -.2rem;
   display: inline-block;
+}
+
+.c-split-link {
+  line-height: 1;
+  position: relative;
+  overflow: clip;
+  display: inline-block;
+  .js-split-text {
+    display: inline-block;
+    &.red {
+      position: absolute;
+      inset: 0;
+      translate: 0 100%;
+      color: #e61d0d;
+
+      .l-footer &{
+        color:inherit;
+      }
+    }
+  }
+  .char {
+    display: inline-block;
+    transition: translate 0.25s;
+  }
+
+  // 文字数分のループを回す例（10文字の場合）
+  @for $i from 1 through 20 {
+    .char:nth-child(#{$i}) {
+      transition-delay: #{$i * 0.01}s;
+    }
+  }
+
+  @include g.hover {
+    .char {
+      translate: 0 -100%;
+    }
+  }
+}
+
+.c-split-link__wrapper{
+  .c-btn__txt--wrapper{
+    position: relative;
+    overflow: clip;
+    display: inline-block;
+    line-height: 1;
+
+    .js-split-text {
+      display: inline-block;
+      &.red {
+        position: absolute;
+        inset: 0;
+        translate: 0 100%;
+      }
+    }
+    .char {
+      display: inline-block;
+      transition: translate 0.25s;
+    }
+  
+    // 文字数分のループを回す例（10文字の場合）
+    @for $i from 1 through 20 {
+      .char:nth-child(#{$i}) {
+        transition-delay: #{$i * 0.01}s;
+      }
+    }
+
+  }
+  @include g.hover {
+    .char {
+      translate: 0 -100%;
+    }
+  }
 }
