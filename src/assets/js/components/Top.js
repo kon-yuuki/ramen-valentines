@@ -18,6 +18,7 @@ class Top {
     this.navControl();
     this.scrollRale()
     this.scrollTriggerRefresh()
+    this.headerControl()
     new Parallax()
   }
 
@@ -123,11 +124,68 @@ class Top {
     sliderObj.mount({ AutoScroll });
   }
 
+  // navControl() {
+  //   const currentName = document.querySelector('.p-top-nav__ttl--current');
+  //   const sectionEls = document.querySelectorAll('.js-section');
+  //   const currentNum = document.querySelector('.p-top-nav__numbers--current--inner');
+  //   const navEls = document.querySelectorAll('.l-header__nav-item');
+  //   const totalSections = sectionEls.length;
+  
+  //   sectionEls.forEach((section, index) => {
+  //     const sectionNumber = index + 1;
+  //     const paddedNumber = String(sectionNumber).padStart(2, '0');
+  
+  //     gsap.to(section, {
+  //       scrollTrigger: {
+  //         trigger: section,
+  //         start: "top center",
+  //         end: "bottom center",
+  //         onEnter: () => {
+  //           currentName.innerHTML = section.id.toUpperCase();
+  //           currentNum.innerHTML = paddedNumber;
+  //         },
+  //         onEnterBack: () => {
+  //           currentName.innerHTML = section.id.toUpperCase();
+  //           currentNum.innerHTML = paddedNumber;
+  //         },
+  //         onLeave: () => {
+  //           const nextSectionInView = Array.from(sectionEls).some(el => {
+  //             const rect = el.getBoundingClientRect();
+  //             const viewportCenter = window.innerHeight / 2;
+  //             return rect.top <= viewportCenter && rect.bottom >= viewportCenter;
+  //           });
+  //           if (!nextSectionInView) {
+  //             currentName.innerHTML = '';
+  //             // currentNumは更新したままにする
+  //           }
+  //         },
+  //         onLeaveBack: () => {
+  //           const prevSectionInView = Array.from(sectionEls).some(el => {
+  //             const rect = el.getBoundingClientRect();
+  //             const viewportCenter = window.innerHeight / 2;
+  //             return rect.top <= viewportCenter && rect.bottom >= viewportCenter;
+  //           });
+  //           if (!prevSectionInView) {
+  //             currentName.innerHTML = '';
+  //             // currentNumは更新したままにする
+  //           }
+  //         }
+  //       }
+  //     });
+  //   });
+  // }
+
   navControl() {
     const currentName = document.querySelector('.p-top-nav__ttl--current');
     const sectionEls = document.querySelectorAll('.js-section');
     const currentNum = document.querySelector('.p-top-nav__numbers--current--inner');
+    const navEls = document.querySelectorAll('.l-header__nav-item');
     const totalSections = sectionEls.length;
+  
+    // 現在のカレントクラスを削除する関数
+    const removeCurrentClass = () => {
+      navEls.forEach(nav => nav.classList.remove('is-current'));
+    };
   
     sectionEls.forEach((section, index) => {
       const sectionNumber = index + 1;
@@ -141,10 +199,16 @@ class Top {
           onEnter: () => {
             currentName.innerHTML = section.id.toUpperCase();
             currentNum.innerHTML = paddedNumber;
+            // カレントクラスの更新
+            removeCurrentClass();
+            navEls[index].classList.add('is-current');
           },
           onEnterBack: () => {
             currentName.innerHTML = section.id.toUpperCase();
             currentNum.innerHTML = paddedNumber;
+            // カレントクラスの更新
+            removeCurrentClass();
+            navEls[index].classList.add('is-current');
           },
           onLeave: () => {
             const nextSectionInView = Array.from(sectionEls).some(el => {
@@ -154,7 +218,8 @@ class Top {
             });
             if (!nextSectionInView) {
               currentName.innerHTML = '';
-              // currentNumは更新したままにする
+              // カレントクラスを削除
+              removeCurrentClass();
             }
           },
           onLeaveBack: () => {
@@ -165,7 +230,8 @@ class Top {
             });
             if (!prevSectionInView) {
               currentName.innerHTML = '';
-              // currentNumは更新したままにする
+              // カレントクラスを削除
+              removeCurrentClass();
             }
           }
         }
@@ -198,6 +264,16 @@ class Top {
         ScrollTrigger.refresh();
       });
     });
+  }
+
+  headerControl() {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 10) {
+        document.body.classList.add('is-scrolled')
+      } else {
+        document.body.classList.remove('is-scrolled')
+      }
+    })
   }
 
 
@@ -244,7 +320,7 @@ class Parallax {
             end: `${end}`,
             scrub: true,
             easing: 'none',
-            markers: true
+            // markers: true
           },
         });
       });

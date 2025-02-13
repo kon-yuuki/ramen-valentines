@@ -2,9 +2,13 @@
 
 body {
   --side-width: 6rem;
-  --header-height: 6.8rem;
+  --header-height: 6.5rem;
   background-color: #efdada;
   max-width: 100%;
+
+  &.is-scrolled{
+    --header-height:5.4rem;
+  }
 }
 .p-top-main {
   position: relative;
@@ -19,6 +23,8 @@ body {
     background-color: rgba(white, 0.3);
     mix-blend-mode: difference;
     z-index: 100;
+    transition:top .25s g.$easing-out_t2;
+    pointer-events: none;
   }
 }
 
@@ -31,7 +37,9 @@ body {
   mix-blend-mode: difference;
   color: white;
   padding-top: var(--header-height);
-  z-index: 100;
+  z-index: 99;
+  pointer-events: none;
+  transition:padding-top 0.25s g.$easing-out_t2;
 }
 
 .p-top-nav__inner {
@@ -44,7 +52,6 @@ body {
   height: calc(100% - 7rem);
   padding-top: 5rem;
   position: sticky;
-  top: 6rem;
   gap: 2.5rem;
 }
 
@@ -168,6 +175,7 @@ body {
 
 .p-fv-content__img {
   width: 30rem;
+  aspect-ratio: 300/204;
   border-radius: 0.5rem;
 }
 
@@ -195,6 +203,15 @@ body {
   width: 63rem;
   position: relative;
   z-index: 1;
+}
+
+.p-top-second__heart{
+  position: absolute;
+  left:50%;
+  top:50%;
+  translate:-50% -50%;
+  z-index: 1;
+  width: 53rem;
 }
 
 .p-top-second__content {
@@ -740,3 +757,14 @@ body {
   padding: 0.5rem 2rem;
   font-size: 1.4rem;
 }
+
+.p-top-second__heart{
+  stroke-dasharray: 5000;
+  stroke-dashoffset:5000;
+  transition:stroke-dashoffset 5s cubic-bezier(.15,1.03,.38,.99);
+
+  &.is-active{
+    stroke-dashoffset:0;
+  }
+}
+

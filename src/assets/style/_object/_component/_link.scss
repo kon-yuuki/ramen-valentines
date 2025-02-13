@@ -128,10 +128,12 @@ a {
 //----------------------------------------------------------------
 
 .c-btn {
+  position:fixed;
   border: 1px solid currentColor;
   border-radius: 100svh;
-  padding: 0.7rem 1.7rem 0.7rem 1.6rem;
+  padding: 0.8rem 1.7rem 0.7rem 1.6rem;
   transition:all 1.25s g.$easing-out_t3;
+  background-color: black;
 
   @include g.hover{
     background-color: #E61D0D;
