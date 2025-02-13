@@ -65,10 +65,12 @@ body {
 .p-top-fv {
   color: white;
   position: relative;
+  z-index: 2;
 }
 .p-top-fv__wrapper {
   background-image: url('/assets/images/top/fv__bg.webp');
   background-size: cover;
+  position: relative;
   clip-path: polygon(
     0 0,
     100% 0,
@@ -77,6 +79,16 @@ body {
     6rem 100%,
     0 calc(100% - 5rem)
   );
+
+  &:before{
+    position:absolute;
+    inset:0;
+    content:'';
+    pointer-events: none;
+    opacity: .8;
+    background-image: linear-gradient(to bottom,transparent 39%,black 80%);
+    z-index:-1;
+  }
 }
 
 .p-top-fv__inner {
@@ -126,25 +138,24 @@ body {
   overflow: clip;
 }
 .p-top-fv__scroll-noodle-inner {
-  display: flex;
-  flex-direction: column;
-  height: 116px;
-  width: 7.29px;
-  translate: 0 -100%;
-  animation: noodleRale 10s infinite forwards linear;
-
-  img {
-    min-height: 116px;
-    object-fit: cover;
-  }
+  --black-point:0%;
+  --transparent-point:70%;
+  width: .7rem;
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    transparent 100%
+  );
+  mask-position: 0% 200%;
+  mask-size: 100% 200%;
+  animation: noodleRale 2.5s infinite forwards g.$easing-out_t2;
 
   @keyframes noodleRale {
     0% {
-      translate: 0 -100%;
+      mask-position: 0% 200%;
     }
-
     100% {
-      translate: 0 0;
+      mask-position: 0% 0%;
     }
   }
 }
@@ -177,6 +188,17 @@ body {
   width: 30rem;
   aspect-ratio: 300/204;
   border-radius: 0.5rem;
+}
+
+.p-top-fv__title{
+  position: relative;
+}
+
+.p-top-fv__ramen{
+  position:absolute;
+  width: 9.8rem;
+  top: 8rem;
+  left: -5rem;
 }
 
 //p-top-second{
@@ -223,6 +245,7 @@ body {
   inset: 0;
   top: 8rem;
   opacity: 0.5;
+  mask-image:linear-gradient(to right,transparent 0%, black 15%,black 85%,transparent 100%);
 
   .splide__slide {
     width: 469.8rem;
@@ -476,6 +499,7 @@ body {
   line-height: 1;
   position: relative;
   z-index: 1;
+  color:white;
 }
 
 .p-top-access__right {
@@ -495,6 +519,10 @@ body {
   inset: 0;
   display: block;
   border-left: 1px solid rgba(#333333, 0.3);
+
+  img{
+    height:100%;
+  }
 }
 
 .p-top-access__point {
@@ -537,12 +565,12 @@ body {
     translate:-50% -50%;
     width:8rem;
     aspect-ratio: 1/1;
-    background-color: rgba(#ff0000, .4);
-    border:1px solid #ff0000;
+    background-color: rgba(#ff0000, .5);
+    border:2px solid #ff0000;
     transform-origin: center;
     border-radius: 50%;
     scale: 1;
-    animation:locate-anime 3s infinite g.$easing-out_t2;
+    animation:locate-anime 2s infinite g.$easing-out_t2;
 
     @keyframes locate-anime {
       0% {
@@ -682,7 +710,7 @@ body {
   }
 }
 .p-top-pr {
-  padding: 0.6rem 0 1rem 1.6rem;
+  padding: 0.7rem 0 .8rem 1.6rem;
   background-color: #242e33;
   display: flex;
   color: white;
@@ -759,9 +787,9 @@ body {
 }
 
 .p-top-second__heart{
-  stroke-dasharray: 5000;
-  stroke-dashoffset:5000;
-  transition:stroke-dashoffset 5s cubic-bezier(.15,1.03,.38,.99);
+  stroke-dasharray: 2000;
+  stroke-dashoffset:2000;
+  transition:stroke-dashoffset 2s cubic-bezier(.15,1.03,.38,.99);
 
   &.is-active{
     stroke-dashoffset:0;

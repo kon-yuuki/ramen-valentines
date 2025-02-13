@@ -16,9 +16,10 @@
   height: var(--header-height);
   padding-left: 1.7rem;
   padding-right: 1.9rem;
-  z-index: 100;
+  z-index: 1001;
   mix-blend-mode: difference;
-  transition:height .25s g.$easing-out_t2;
+  transition:.25s g.$easing-out_t2;
+  transition-property: height,filter;
 
   .is-scrolled &{
     backdrop-filter: blur(10px);
@@ -36,7 +37,7 @@
   position: fixed;
   right:1.9rem;
   top:1.5rem;
-  z-index: 100;
+  z-index: 1001;
   color:white;
   font-size: 1.2rem;
   letter-spacing: -0.04rem;

@@ -14,11 +14,13 @@ class Top {
     this.lenisInit()
     this.textSlider()
     this.slider();
+    this.stickySection()
     this.prSlider();
     this.navControl();
     this.scrollRale()
     this.scrollTriggerRefresh()
     this.headerControl()
+    this.viewPortObserver()
     new Parallax()
   }
 
@@ -274,6 +276,41 @@ class Top {
         document.body.classList.remove('is-scrolled')
       }
     })
+  }
+  viewPortObserver() {
+    const targetEls = document.querySelectorAll('.js-view-port-observer');
+    
+    targetEls.forEach((target) => {
+      gsap.to(target, {
+        scrollTrigger: {
+          trigger: target,
+          start: "top 80%", // 要素の上端が画面の下端に到達した時
+          once: true, // 一度だけ実行
+          onEnter: () => {
+            target.classList.add('is-active');
+          }
+        }
+      });
+    });
+  }
+  stickySection() {
+    const target = document.querySelector('.js-parallax-section');
+    
+    // マイナスのmargin-bottomを設定
+    target.style.marginTop = '-400px';
+  
+    // ScrollTriggerアニメーションの設定
+    gsap.to(target, {
+      scrollTrigger: {
+        trigger: target,
+        start: "top bottom", // targetの上端が画面上端に来た時
+        end: `top top`, // targetの下端が画面上端に来た時
+        scrub: true, // スクロール量に連動
+        markers: true, //
+      },
+      marginTop: 0,
+      ease: "none"
+    });
   }
 
 
