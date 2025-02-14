@@ -11,19 +11,20 @@ class Heart {
     this.width = width;
     this.height = height;
     this.rotationAngles = {
-      x: 15, // degrees
-      y: 0,  // degrees
-      z: 15  // degrees
+      x: 15,
+      y: 0,
+      z: 15
     };
     this.scene = null;
     this.camera = null;
     this.model = null;
     this.renderer = null;
-    this.rotationSpeed = 0.5;
+    this.baseRotationSpeed = 0.5;  // 基本の回転速度をここで設定
+    this.rotationSpeed = this.baseRotationSpeed;  // 現在の回転速度
     this.currentRotation = 0;
     this.floatingY = 0;
+    this.isVisible = false;  // 表示状態の管理を追加
     
-    // モデルを一度だけ読み込むためのキャッシュ
     if (!Heart.modelCache) {
       Heart.modelCache = null;
       Heart.modelLoading = null;
@@ -45,7 +46,7 @@ class Heart {
     Heart.modelLoading = new Promise((resolve, reject) => {
       const loader = new GLTFLoader();
       loader.load(
-        `${__BASE_PATH__}model/heart.gltf`, // パスを修正
+        `${__BASE_PATH__}model/heart.gltf`,
         (gltf) => {
           Heart.modelCache = gltf.scene;
           resolve(gltf.scene.clone());
@@ -74,20 +75,22 @@ class Heart {
     if (!canvas) {
       throw new Error(`Canvas with id "${this.canvasId}" not found`);
     }
-
-      // 初期状態で非表示に
-  canvas.classList.remove('is-visible');
-
-    // データ属性から回転角度を読み取る
+  
+    canvas.classList.remove('is-visible');
+  
     const rotX = parseFloat(canvas.dataset.rotationX);
     const rotY = parseFloat(canvas.dataset.rotationY);
     const rotZ = parseFloat(canvas.dataset.rotationZ);
-
-    // 有効な値が指定されている場合のみ更新
+    const rotSpeed = parseFloat(canvas.dataset.rotationSpeed);
+  
     if (!isNaN(rotX)) this.rotationAngles.x = rotX;
     if (!isNaN(rotY)) this.rotationAngles.y = rotY;
     if (!isNaN(rotZ)) this.rotationAngles.z = rotZ;
-
+    if (!isNaN(rotSpeed)) {
+      this.baseRotationSpeed = rotSpeed;  // 基本速度を更新
+      this.rotationSpeed = rotSpeed;      // 現在の速度も更新
+    }
+  
     this.renderer = new THREE.WebGLRenderer({
       canvas: canvas,
       alpha: true,
@@ -150,28 +153,51 @@ class Heart {
   setupScrollAnimation() {
     let lastScrollTop = 0;
     let scrollSpeed = 0;
-
-    // スクロール速度を計算し、回転速度に反映
-    window.addEventListener('scroll', () => {
+    const canvas = document.querySelector(`#${this.canvasId}`);
+  
+    // Intersection Observerの設定
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.isVisible = true;
+        } else {
+          this.isVisible = false;
+          // 画面外に出たら基本速度に戻す
+          this.rotationSpeed = this.baseRotationSpeed;
+        }
+      });
+    });
+  
+    this.observer.observe(canvas);
+  
+    // スクロールイベントの設定
+    const handleScroll = () => {
+      if (!this.isVisible) return;  // 表示されていない場合は処理しない
+  
       const st = window.scrollY || document.documentElement.scrollTop;
       scrollSpeed = Math.abs(st - lastScrollTop);
       lastScrollTop = st;
-
-      // スクロール速度に基づいて回転速度を更新
+  
+      // 基本速度を基準に回転速度を更新
       gsap.to(this, {
-        rotationSpeed: 0.5 + (scrollSpeed * 0.8),
+        rotationSpeed: this.baseRotationSpeed + (scrollSpeed * 0.8),
         duration: .2,
         ease: "none"
       });
-
-      // スクロールが止まったら徐々に基本速度に戻る
+  
+      // スクロールが止まったら基本速度に戻る
       gsap.to(this, {
-        rotationSpeed: 0.5,
+        rotationSpeed: this.baseRotationSpeed,
         duration: .5,
         delay: 0,
         ease: "none"
       });
-    });
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    
+    // cleanup用に参照を保持
+    this.scrollHandler = handleScroll;
   }
 
   animate() {
@@ -199,12 +225,20 @@ class Heart {
 
   // クリーンアップのためのメソッドを追加
   dispose() {
-    // アニメーションループを停止
     if (this.animationFrameId) {
       cancelAnimationFrame(this.animationFrameId);
     }
-
-    // Three.jsのリソースを解放
+  
+    // Intersection Observerのクリーンアップ
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  
+    // スクロールイベントリスナーのクリーンアップ
+    if (this.scrollHandler) {
+      window.removeEventListener('scroll', this.scrollHandler);
+    }
+  
     if (this.renderer) {
       this.renderer.dispose();
     }
@@ -223,9 +257,6 @@ class Heart {
       });
     }
   }
-
-  // 他のメソッド（setupFloatingAnimation, setupScrollAnimation, animate）は
-  // 前のコードと同じですが、this.rendererを使用するように更新
 }
 
 export default Heart;

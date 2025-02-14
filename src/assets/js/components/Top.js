@@ -313,6 +313,10 @@ class Top {
     });
   }
 
+  parallaxObj(){
+    const targetEls = document.querySelectorAll('.js-parallaxObj-target');
+  }
+
 
 }
 
