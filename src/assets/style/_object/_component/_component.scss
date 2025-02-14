@@ -8,19 +8,21 @@
   color: white;
   line-height: 1;
   letter-spacing: -0.6rem;
+  font-size:  unquote('clamp(80px,8.676vw,160px)');
 }
 
 .c-copy {
   &:nth-of-type(2) {
     width: 60rem;
-    padding-left: 9.4rem;
+    width:44.2vw;
+    padding-left: 7vw;
     height: 1lh;
   }
   &:nth-of-type(3) {
-    margin-left: -5rem;
+    margin-left: -3.7vw;
   }
   &:nth-of-type(4) {
-    width: 21rem;
+    width: 14.7vw;
     height: 1lh;
     translate: 3rem 0.15lh;
   }

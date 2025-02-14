@@ -306,7 +306,7 @@ class Top {
         start: "top bottom", // targetの上端が画面上端に来た時
         end: `top top`, // targetの下端が画面上端に来た時
         scrub: true, // スクロール量に連動
-        markers: true, //
+        // markers: true, //
       },
       marginTop: 0,
       ease: "none"

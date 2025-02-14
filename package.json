@@ -9,7 +9,8 @@
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@wordpress/env": "5.14.0",
     "gsap": "^3.12.7",
-    "lenis": "^1.1.20"
+    "lenis": "^1.1.20",
+    "three": "^0.173.0"
   },
   "scripts": {
     "dev": "concurrently \"vite --host\" \"npm run img-watch\"",
@@ -46,7 +47,7 @@
     "stylelint-config-recess-order": "4.4.0",
     "stylelint-config-standard-scss": "13.0.0",
     "typescript": "5.3.3",
-    "vite": "5.0.12"
+    "vite": "^5.0.12"
   },
   "volta": {
     "node": "20.12.2"

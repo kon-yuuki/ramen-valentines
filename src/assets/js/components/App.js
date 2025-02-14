@@ -1,6 +1,7 @@
 'use strict';
 import SplitText from './SplitText';
 import Top from './Top';
+import Heart from './Heart';
 
 class App {
   constructor() {}
@@ -10,6 +11,7 @@ class App {
 
     if (winW > 1023) {
       new Top();
+      new Heart();
       new SplitText('.js-split-text', 'char');
     }
   }

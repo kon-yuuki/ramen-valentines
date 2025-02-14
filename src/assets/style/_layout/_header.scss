@@ -66,6 +66,8 @@
 
 .l-header__nav-item{
   position: relative;
+  width: fit-content;
+  white-space: nowrap;
 
   &:before{
     content:'';
