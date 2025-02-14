@@ -33,7 +33,10 @@ const inputsForStatic = {
 
 export default defineConfig(({ mode }) => ({
   root,
-  base: "./",
+  base: mode === "production" ? "/ramen-valentines/" : "./",
+  define: {
+    '__BASE_PATH__': JSON.stringify(mode === "production" ? "/ramen-valentines/" : "./")
+  },
   server: {
     port: 5173,
     origin: mode == "wp" ? undefined : "http://localhost:5173",
