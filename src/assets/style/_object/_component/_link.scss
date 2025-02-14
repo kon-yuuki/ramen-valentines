@@ -51,10 +51,15 @@ a {
 
 .c-linelink {
   .c-linelink__txt.is-animated {
-    animation: linelink 0.4s g.$easing-out_t2 forwards;
-
+    
     @media (max-width: g.$size-sp) {
       animation: linelinkSp 0.4s g.$easing-out_t2 forwards;
+    }
+    
+  }
+  @include g.hover{
+    .c-linelink__txt{
+      animation: linelink 0.4s g.$easing-out_t2 forwards;
     }
   }
 

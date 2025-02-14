@@ -20,6 +20,7 @@ class Top {
     this.scrollRale()
     this.scrollTriggerRefresh()
     this.headerControl()
+    this.parallaxObj()
     this.viewPortObserver()
     new Parallax()
   }
@@ -313,8 +314,23 @@ class Top {
     });
   }
 
-  parallaxObj(){
+  parallaxObj() {
     const targetEls = document.querySelectorAll('.js-parallaxObj-target');
+    
+    targetEls.forEach(target => {
+      const distance = target.dataset.parallaxY || -200;
+      
+      gsap.to(target, {
+        y: distance,
+        ease: "none",
+        scrollTrigger: {
+          trigger: target,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+    });
   }
 
 
