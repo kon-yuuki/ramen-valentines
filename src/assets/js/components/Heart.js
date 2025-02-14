@@ -45,7 +45,7 @@ class Heart {
     Heart.modelLoading = new Promise((resolve, reject) => {
       const loader = new GLTFLoader();
       loader.load(
-        '/assets/model/heart.gltf',
+        '/model/heart.gltf',
         (gltf) => {
           Heart.modelCache = gltf.scene;
           resolve(gltf.scene.clone());

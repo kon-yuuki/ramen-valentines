@@ -1,0 +1,126 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.0.44",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "heart",
+      "scale": [
+        1.8147773742675781,
+        1.4918723106384277,
+        0.6944855451583862
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "マテリアル",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.4000000059604645,
+          0.0014016152126714587,
+          0,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.30000001192092896
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "box",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 28625,
+      "max": [
+        1.0032658576965332,
+        1.0974071025848389,
+        1.1395649909973145
+      ],
+      "min": [
+        -1.0032658576965332,
+        -1.02302885055542,
+        -1.1395649909973145
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 28625,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 28625,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 168960,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 343500,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 343500,
+      "byteOffset": 343500,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 229000,
+      "byteOffset": 687000,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 337920,
+      "byteOffset": 916000,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "heart_data.bin",
+      "byteLength": 1253920
+    }
+  ]
+}

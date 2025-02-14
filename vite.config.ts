@@ -5,24 +5,6 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(__dirname, "src");
 
-// 全てのアセットファイルを取得する関数
-const getAllAssets = () => {
-  return Object.fromEntries(
-    globSync("src/assets/**/*.*", { 
-      ignore: [
-        "src/assets/js/**/*", 
-        "src/assets/style/**/*",
-        "src/assets/images/**/*" // 画像ファイルを除外
-      ] 
-    }).map((file) => [
-      relative(
-        "src/assets",
-        file.slice(0, file.length - extname(file).length)
-      ),
-      fileURLToPath(new URL(file, import.meta.url))
-    ])
-  );
-};
 
 // WordPress用ビルドのinput設定
 const inputsForWordPress = {
@@ -36,7 +18,6 @@ const inputsForWordPress = {
       fileURLToPath(new URL(file, import.meta.url)),
     ]),
   ),
-  ...getAllAssets(),
 };
 
 // 静的開発用のinput設定
@@ -48,7 +29,6 @@ const inputsForStatic = {
       fileURLToPath(new URL(file, import.meta.url)),
     ]),
   ),
-  ...getAllAssets(),
 };
 
 export default defineConfig(({ mode }) => ({
@@ -72,18 +52,23 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: ({ name }) => {
           if (!name) return 'assets/[name].[ext]';
           
+          // CSSファイルの処理
           if (name === "style.css") {
             return "assets/style/[name].[ext]";
           } 
           
           // 画像ファイルの処理
-          if (/\.(png|jpe?g|gif|svg|webp)$/.test(name)) {
+          if (/\.(png|jpe?g|gif|svg|webp|avif)$/.test(name)) {
             return "assets/images/[name].[ext]";
           }
           
-          // 3Dモデル関連ファイルの処理
+          // 3Dモデルファイルの処理（相対パスを維持）
           if (/\.(bin|glb|gltf)$/.test(name)) {
-            return "assets/models/[name].[ext]";
+            // model ディレクトリにあるファイルの場合は、そのパスを維持
+            if (name.includes('model/')) {
+              return `assets/${name}`;
+            }
+            return "assets/model/[name].[ext]";
           }
           
           // JSファイルの処理
