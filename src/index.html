@@ -5,22 +5,27 @@
     <link rel="preload" as="image" href="/assets/images/top/valentine__demo.svg" type="image/svg+xml">
     <link rel="preload" as="image" href="/assets/images/top/2025__demo.svg" type="image/svg+xml">
     <meta charset="UTF-8" />
-    <meta name="description" content="" />
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
+    <meta name="description" content="勝手にバレンタインデーの新しい楽しみ方を提案するスペシャルサイトです。" />
+    <meta property="og:title" content="RAMEN VALENTINE'S DAY CELEBRATION 2025" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RAMEN VALENTINE'S DAY CELEBRATION 2025" />
+    <meta property="og:description" content="勝手にバレンタインデーの新しい楽しみ方を提案するスペシャルサイトです。" />
     <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:width" content="" />
-    <meta property="og:image:height" content="" />
+    <meta property="og:image" content="/assets/images/ogp.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
-    <title>page title</title>
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+    <title>RAMEN VALENTINE'S DAY CELEBRATION 2025</title>
     <link rel="stylesheet" href="/assets/style/style.scss" />
     <link rel="stylesheet" href="https://use.typekit.net/srh7dlq.css" />
-    <script src="/assets/js/script.js" type="module"></script>
+    <script src="/assets/js/loading.js" type="module"></script>
+    <script src="/assets/js/script.js" type="module" defer></script>
   </head>
   <body>
     <svg display="none">
@@ -144,7 +149,8 @@
                 ><img src="/assets/images/top/valentine__demo.svg" alt="valentines" width="598" height="140" /></span
               ><span class="c-copy">CELEBRATION</span
               ><span class="c-copy"><img src="/assets/images/top/2025__demo.svg" width="205" height="130" alt="2025" /></span>
-              <img class="p-top-fv__ramen" src="/assets/images/top/fv_ramen.webp" alt="">
+              <img class="p-top-fv__ramen" src="/assets/images/top/fv_ramen.webp" alt="" aria-hidden="true">
+              <canvas id="fv_heart3" aria-hidden="true" class="heart-canvas" data-width="100" data-height="100" data-rotation-x="0" data-rotation-z="0"></canvas>
             </h1>
             <div class="p-top-fv__scroll font__en">
               <p class="p-top-fv__scroll-txt">Find Your Special Bowl !!</p>
@@ -154,7 +160,8 @@
                 </div>
               </div>
             </div>
-            <canvas id="fv_heart"></canvas>
+            <canvas id="fv_heart1" aria-hidden="true" class="heart-canvas" data-width="300" data-height="300"></canvas>
+           
           </div>
           <div class="p-top-fv__bottom js-section" id="introduction">
             <div class="p-top-fv__bottom-inner">
@@ -172,7 +179,9 @@
                 <div class="js-parallax-wrapper p-fv-content__img">
                   <img src="/assets/images/top/fv_ramen2.webp" alt="" class="js-parallax-target" />
                 </div>
+                <canvas id="fv_heart4" aria-hidden="true" class="heart-canvas" data-width="250" data-height="250" data-rotation-x="0" data-rotation-z="0"></canvas>
               </div>
+              <canvas id="fv_heart5" aria-hidden="true" class="heart-canvas" data-width="100" data-height="100"></canvas>
             </div>
           </div>
         </div>
@@ -264,6 +273,7 @@
             <h2 class="p-top-ttl__jp">
               <span class="p-top-ttl__jp__row1">バレンタインでも、</span
               ><span class="p-top-ttl__jp__row2">ラーメンが食べたい。</span>
+              <canvas id="tabetai_heart1" aria-hidden="true" class="heart-canvas" data-width="300" data-height="300"></canvas>
             </h2>
             <div class="js-parallax-wrapper p-top-tabetai__img-top">
               <img src="/assets/images/top/tabetai_1.webp" alt="" class="js-parallax-target" loading="lazy" width="300" height="540" />
@@ -276,6 +286,8 @@
             <p class="p-top-tabetai__txt">
               チョコレートを選ぶのが当たり前だった特別な日。<br>でも、本当に食べたいものは人それぞれ。<br>温かい出汁の香り、のびる麺の艶、トッピングの彩り。<br>あなたの心が求めている味は、意外とシンプルなのかもしれない。<br>伝統的なバレンタインから一歩踏み出して、<br>新しい選択をする勇気。<br>誰かのために選ぶのではなく、<br>純粋に自分の気持ちに正直になれる時間。<br>寒い季節だからこそ、温かい一杯に心惹かれる。<br>湯気の向こうに見える笑顔も、<br>今日は特別に輝いて見えるはず。<br>ひとりでゆっくり味わうのも、大切な人と共有するのも自由。<br>あなたらしさが詰まった一杯が、<br>このバレンタインをかけがえのない思い出に変えていく。<br>今年は、あなたの「食べたい」から始めよう。
             </p>
+            <canvas id="tabetai_heart2" aria-hidden="true" class="heart-canvas" data-width="200" data-height="200" data-rotation-x="0" data-rotation-z="0"></canvas>
+            <canvas id="tabetai_heart3" aria-hidden="true" class="heart-canvas" data-width="100" data-height="100" data-rotation-x="0" data-rotation-z="0"></canvas>
           </div>
           <div class="p-top-tabetai__bg">
             <img src="/assets/images/top/tabetai_bg.webp" alt="" loading="lazy" width="1360" height="1004" />
@@ -438,7 +450,7 @@
         <div class="c-copies l-footer__copies font__en--light">
               <span class="c-copy">RAMEN</span
               ><span class="c-copy"
-                ><img src="/assets/images/top/valentine__demo.svg" loading="lazy" alt="valentines"   width="598" height="140" /></span
+                ><img src="/assets/images/top/valentine__demo.svg" loading="lazy" alt="valentines"   width="598" height="140" /><canvas id="footer_heart1" aria-hidden="true" data-width="200" data-height="200" data-rotation-x="0"   data-rotation-z="0" class="heart-canvas"></canvas></span
               ><span class="c-copy">CELEBRATION</span
               ><span class="c-copy"><img src="/assets/images/top/2025__demo.svg" loading="lazy" alt="2025"  width="205" height="130" /></span>
               <img src="/assets/images/top/footer_noodle.webp" alt="" loading="lazy"  width="169" height="140" class="l-footer__noodle" />
@@ -465,6 +477,7 @@
       </div>
     </footer>
 
+    <canvas id="fv_heart2" aria-hidden="true" data-width="200" data-height="200" data-rotation-x="0"   data-rotation-z="0" class="heart-canvas"></canvas>
     <div class="p-top-sp-cover">
       <p class="p-top-sp-cover__txt">こちらのサイトは<br>1024px以上の画面サイズでお楽しみいただけます</p>
       <img class="p-top-sp-cover__img" src="/assets/images/top/footer_noodle.webp" alt="">

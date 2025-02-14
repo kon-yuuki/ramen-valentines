@@ -175,6 +175,11 @@ body {
   padding-left: 7rem;
   padding-right: 19.7rem;
   justify-content: space-between;
+  position: relative;
+}
+
+.p-top-fv__content{
+  position: relative;
 }
 
 .p-top-fv__content-copy {
@@ -375,7 +380,8 @@ body {
     flex-direction: column;
     margin-bottom: -2rem;
     width: fit-content;
-    margin-inline:auto ;
+    margin-inline:auto;
+    position: relative;
   }
   .p-top-ttl__jp__row2 {
     padding-left: 2.75em;
@@ -409,6 +415,7 @@ body {
   display: block;
   margin-bottom: -4rem;
   position: relative;
+  z-index: 1;
 }
 
 .p-top-tabetai__flex {
@@ -852,13 +859,84 @@ body {
 }
 
 
+.heart-canvas{
+  filter:brightness(0.8);
+  opacity: 0;
+  transition:opacity 1s g.$easing-out_t2;
 
-#fv_heart{
-  width:500px;
-  height:500px;
-  position: fixed;
+  &.is-visible{
+    opacity: 1;
+  }
+}
+#fv_heart1{
+  position: absolute;
   top:0;
   right:0;
   z-index: 6000;
   background-color: transparent;
+}
+#fv_heart2{
+  position: absolute;
+  top:80svh;
+  left:-3rem;
+  z-index: 1000;
+  background-color: transparent;
+}
+#fv_heart3{
+  position: absolute;
+  bottom:-2rem;
+  left:20vw;
+  z-index: 100;
+  background-color: transparent;
+  filter:brightness(.6)
+}
+#fv_heart4{
+  position: absolute;
+  top:-10rem;
+  right:-8vw;
+  z-index: 100;
+  background-color: transparent;
+}
+#fv_heart5{
+  position: absolute;
+  top:15rem;
+  left:10vw;
+  z-index: 100;
+  background-color: transparent;
+  filter:brightness(.5);
+}
+
+#tabetai_heart1{
+  position: absolute;
+  top:-13rem;
+  right:-13vw;
+  z-index: 100;
+  background-color: transparent;
+  filter: brightness(.9);
+}
+
+#tabetai_heart2{
+  position: absolute;
+  bottom:-8rem;
+  left:0vw;
+  z-index: 100;
+  background-color: transparent;
+  filter:brightness(.7);
+}
+#tabetai_heart3{
+  position: absolute;
+  top:3rem;
+  left:37vw;
+  z-index: 100;
+  background-color: transparent;
+  filter:brightness(.5);
+}
+#footer_heart1{
+  position: absolute;
+  top: 65%;
+  right: -18rem;
+  translate:0 -50%;
+  z-index: 100;
+  background-color: transparent;
+  filter:brightness(.85);
 }
